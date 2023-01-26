@@ -2,9 +2,8 @@
 
 *Table: Scores*
 
-id (int)
-
-score (decimal)
+| id (int) | score (decimal) |
+|---|---|
 
 
 id is the primary key for this table.
