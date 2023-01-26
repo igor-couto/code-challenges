@@ -1,16 +1,12 @@
-#178. Rank Scores
+# 178. Rank Scores
 
 *Table: Scores*
 
-+-------------+---------+
-| Column Name | Type    |
-+-------------+---------+
-| id          | int     |
-| score       | decimal |
-+-------------+---------+
+id (int)
+score (decimal)
+
 id is the primary key for this table.
 Each row of this table contains the score of a game. Score is a floating point value with two decimal places.
- 
 
 Write an SQL query to rank the scores. The ranking should be calculated according to the following rules:
 
@@ -23,7 +19,8 @@ The query result format is in the following example.
 
 *Example 1:*
 
-Input: 
+**Input:**
+
 Scores table:
 +----+-------+
 | id | score |
@@ -35,7 +32,8 @@ Scores table:
 | 5  | 4.00  |
 | 6  | 3.65  |
 +----+-------+
-Output: 
+
+**Output:** 
 +-------+------+
 | score | rank |
 +-------+------+
