@@ -1,0 +1,21 @@
+-- SELECT CAST(ROUND(
+    
+--     CASE
+--         WHEN (SELECT COUNT(*) % 2 FROM STATION) = 0 THEN (SELECT LAT_N FROM STATION OFFSET (COUNT(*)+1/2))
+--         WHEN (SELECT COUNT(*) % 2 FROM STATION) != 0 THEN (SELECT LAT_N FROM STATION OFFSET ((COUNT(*)+1/2) + (COUNT(*)/2)))
+--     END
+
+--      , 4) AS DECIMAL(18, 4)) FROM STATION ORDER BY POPULATION ASC
+
+SELECT
+CAST(
+    ((
+    (SELECT MAX(LAT_N) 
+     FROM
+    (SELECT top 50 percent LAT_N FROM STATION ORDER BY LAT_N) AS bottomhalf)
+        +
+    (SELECT MIN(LAT_N) 
+     FROM
+    (SELECT top 50 percent LAT_N FROM STATION ORDER BY LAT_N DESC) AS tophalf)
+    ) / 2) 
+    AS DECIMAL(10,4));
