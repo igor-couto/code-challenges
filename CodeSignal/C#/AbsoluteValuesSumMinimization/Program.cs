@@ -7,7 +7,6 @@ using AbsoluteValuesSumMinimization.Benchmark;
 
 var benchmarkConfiguration = ManualConfig.CreateEmpty()
     .AddColumnProvider(DefaultColumnProviders.Instance)
-    .AddExporter(HtmlExporter.Default)
     .AddExporter(MarkdownExporter.Default)
     .AddLogger(ConsoleLogger.Default);
 

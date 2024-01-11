@@ -23,6 +23,10 @@ public class Benchmark
         => Solution.AbsoluteValuesSumMinimization_NaiveButALittleBetter(array);
 
     [Benchmark]
+    public void AbsoluteValuesSumMinimization_Linq() 
+        => Solution.AbsoluteValuesSumMinimization_Linq(array);
+
+    [Benchmark]
     public void AbsoluteValuesSumMinimization_BestSolution() 
         => Solution.AbsoluteValuesSumMinimization_BestSolution(array);
 }

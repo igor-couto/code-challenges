@@ -69,6 +69,14 @@ public static class Solution
         return result;
     }
 
+    public static int AbsoluteValuesSumMinimization_Linq(int[] array)
+    {
+        return array.Select(x => new { Result = x, Sum = array.Sum(y => Math.Abs(y - x)) })
+                    .OrderBy(item => item.Sum)
+                    .First()
+                    .Result;
+    }
+
     public static int AbsoluteValuesSumMinimization_BestSolution(int[] array)
     {
         int lenght = array.Length;
