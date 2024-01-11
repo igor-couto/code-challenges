@@ -17,4 +17,12 @@ public class Benchmark
     [Benchmark]
     public void AbsoluteValuesSumMinimization_SecondAttempt() 
         => Solution.AbsoluteValuesSumMinimization_SecondAttempt(array);
+
+    [Benchmark]
+    public void AbsoluteValuesSumMinimization_NaiveButALittleBetter() 
+        => Solution.AbsoluteValuesSumMinimization_NaiveButALittleBetter(array);
+
+    [Benchmark]
+    public void AbsoluteValuesSumMinimization_BestSolution() 
+        => Solution.AbsoluteValuesSumMinimization_BestSolution(array);
 }
