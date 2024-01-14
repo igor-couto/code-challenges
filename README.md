@@ -6,7 +6,7 @@ The solutions provided here are my own personal take on the challenges and are n
 
 ## Author
 
-* **Igor Couto** - [igor.fcouto@gmail.com](mailto:igor.fcouto@gmail.com)
+- **Igor Couto** - [igor.fcouto@gmail.com](mailto:igor.fcouto@gmail.com)
 
 ## I'm social!
 
